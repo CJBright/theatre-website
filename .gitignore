@@ -1,0 +1,6 @@
+# NPM packages
+node_modules/
+
+# Local files
+.env
+.DS_Store

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "The Enchanted Forest",
+    "poster": "show_1/show_1_poster.webp",
+    "hero": "show_1/show_1_hero.webp",
+    "slug": "enchanted-forest",
+    "description": "A magical journey through an enchanted forest full of wonder. Mystical creatures, ancient trees, and secrets await. A timeless tale for dreamers of all ages.",
+    "runtime": "90 mins",
+    "price": "£18",
+    "ticketUrl": "https://tickets.example.com/enchanted-forest"
+  },
+  {
+    "id": 2,
+    "title": "The Lost Kingdom",
+    "poster": "show_2/show_2_poster.webp",
+    "hero": "show_2/show_2_hero.webp",
+    "slug": "lost-kingdom",
+    "description": "Embark on an epic adventure to rediscover a forgotten world. Ancient legends come to life as heroes rise and kingdoms fall. Courage will be tested.",
+    "runtime": "110 mins",
+    "price": "£20",
+    "ticketUrl": "https://tickets.example.com/lost-kingdom"
+  },
+  {
+    "id": 3,
+    "title": "A Winter's Dream",
+    "poster": "show_3/show_3_poster.webp",
+    "hero": "show_3/show_3_hero.webp",
+    "slug": "winters-dream",
+    "description": "Set in a shimmering winter wonderland, this heartwarming story weaves dreams and magic together. A celebration of hope, friendship, and snowy nights.",
+    "runtime": "85 mins",
+    "price": "£16",
+    "ticketUrl": "https://tickets.example.com/winters-dream"
+  },
+  {
+    "id": 4,
+    "title": "Pirates and Princesses",
+    "poster": "show_4/show_4_poster.webp",
+    "hero": "show_4/show_4_hero.webp",
+    "slug": "pirates-and-princesses",
+    "description": "When seas clash with kingdoms, anything can happen! Swashbuckling pirates meet fearless princesses in a musical adventure across distant lands.",
+    "runtime": "95 mins",
+    "price": "£17",
+    "ticketUrl": "https://tickets.example.com/pirates-and-princesses"
+  },
+  {
+    "id": 5,
+    "title": "The Clockmaker's Secret",
+    "poster": "show_5/show_5_poster.webp",
+    "hero": "show_5/show_5_hero.webp",
+    "slug": "clockmakers-secret",
+    "description": "In a quiet village, an ancient clock hides a powerful secret. Time twists, destinies shift, and the truth ticks ever closer in this thrilling mystery.",
+    "runtime": "100 mins",
+    "price": "£19",
+    "ticketUrl": "https://tickets.example.com/clockmakers-secret"
+  },
+  {
+    "id": 6,
+    "title": "Beyond the Stars",
+    "poster": "show_6/show_6_poster.webp",
+    "hero": "show_6/show_6_hero.webp",
+    "slug": "beyond-the-stars",
+    "description": "Journey through galaxies where dreams defy gravity. A spectacular cosmic odyssey blending music, wonder, and the limitless power of imagination.",
+    "runtime": "120 mins",
+    "price": "£22",
+    "ticketUrl": "https://tickets.example.com/beyond-the-stars"
+  }
+]

@@ -1,0 +1,143 @@
+<!-- Add header to page -->
+<%- include('../partials/header') %>
+
+
+<!-- Hero with autoplay video -->
+<section class="position-relative overflow-hidden" style="height: 55vh; overflow:hidden">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline 
+        class="w-100 h-100 position-absolute top-0 start-0 fade-in" 
+        style="object-fit: cover; z-index: -2;">
+    <source src="/videos/show-childrens.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+  
+  <!-- Dark tint -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.4); z-index: -1;"></div>
+
+  <!-- Text overlay -->
+  <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white text-center">
+    <h1 class="display-4 fw-bold">There's nothing quite like centre-stage</h1>
+  </div>
+
+</section>
+
+
+<!-- About us -->
+<section class="bg-dark py-5">
+  <div class="container text-center">
+    
+    <h2 class="mb-4" style="font-size: 2rem; font-weight: 600;">
+      Step into a world of magic.<br>
+      Where every performance is a story come to life.
+    </h2>
+    
+    <p class="lead" style="font-size: 1.125rem; max-width: 800px; margin: 0 auto;">
+      Welcome to our theatre company — a place where imagination dances with reality. 
+      Each show we craft is a journey into wonder, laughter, and timeless memories. 
+      Join us and experience storytelling like never before.
+    </p>
+  </div>
+</section>
+
+
+<!-- Image span -->
+<section class="position-relative" style="height: 50vh; overflow: hidden;">
+  <img  src="/images/performance/theatre.webp" 
+        alt="Image of a theatre." 
+        class="w-100 h-100 position-absolute top-0 start-0 fade-in" 
+        style="object-fit: cover; object-position: center 90%; z-index: -1;">
+  
+  <!-- Dark tint -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.3); z-index: 0;"></div> 
+</section>
+
+
+<!-- Text section -->
+<section class="py-5 bg-dark">
+  <div class="container text-center">
+
+    <h2 class="mb-4" style="font-size: 2rem; font-weight: 600;">
+      Every seat tells a story.<br>
+      Every moment creates a memory.
+    </h2>
+
+    <p class="lead" style="font-size: 1.125rem; max-width: 800px; margin: 0 auto;">
+      In our theatre, the ordinary transforms into the extraordinary. 
+      From the first spotlight to the final curtain call, our passion for storytelling fills every performance. 
+      Come experience tales woven with heart, magic, and a touch of wonder.
+    </p>
+
+  </div>
+</section>
+
+<!-- Hero with autoplay video -->
+<section class="position-relative overflow-hidden" style="height: 55vh; overflow:hidden">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline 
+        class="w-100 h-100 position-absolute top-0 start-0 fade-in" 
+        style="object-fit: cover; object-position: center 70%; z-index: -2;">
+    <source src="/videos/rehersal-stage.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+  
+  <!-- Dark tint -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.4); z-index: -1;"></div>
+
+  <!-- Text overlay -->
+  <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white text-center">
+    <h1 class="display-4 fw-bold">Setting up at a theatre near you</h1>
+  </div>
+
+</section>
+
+<!-- Our shows -->
+<section class="py-5 bg-dark" id="shows">
+  <div class="container text-center">
+
+    <!-- Section Heading -->
+    <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 700;">Our Hottest Shows</h2>
+
+    <!-- Lead paragraph -->
+    <p class="lead mb-5" style="font-size: 1.2rem;">
+      Discover our magical lineup — click on a show to find out more!
+      <br>Click on <em>'view all shows'</em> to see the range!
+    </p>
+
+    <!-- Grid of first 4 show posters -->
+     <div class="show-grid-wrapper">
+      <div class="row g-4 justify-content-center">
+    
+        <% shows.slice(0, 4).forEach(show => { %>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="card h-100 shadow-sm d-flex flex-column">
+              <img src="/images/shows/<%= show.poster %>" 
+                   class="card-img-top img-fluid show-poster-img fade-in" 
+                   alt="<%= show.title %> Poster" 
+                   style="width: 100%; height: auto;">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-semibold text-center" style="min-height: 2rem;"><%= show.title %></h5>
+                <div class="mt-auto text-center">
+                  <a href="/shows/<%= show.slug %>" class="btn btn-outline-primary btn-sm">View Show</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+
+        <!-- View all shows button -->
+        <div class="mt-5">
+          <a href="/shows" class="btn btn-lg btn-outline-primary px-5 py-3 fw-bold">
+            View All Shows
+          </a>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Add footer to page -->
+<%- include('../partials/footer') %>

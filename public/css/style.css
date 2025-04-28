@@ -1,0 +1,69 @@
+/* Invert logo 1-White, 0-Black */
+#header-logo{
+  filter: grayscale(100%) brightness(0) invert(1);
+}
+
+/* Animate show poster cards on hover */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Show cards take 100% width on small screens, 80% on large */
+.show-grid-wrapper {
+  width: 100%;
+}
+
+@media (min-width: 1200px) { /* Large screens (xl in Bootstrap) */
+  .show-grid-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.show-poster-img {
+  width: 100%;
+  height: auto; /* Keep natural aspect ratio */
+  object-fit: contain; /* Important: contain, not cover */
+}
+
+
+/* Set opacity for fade in and out scrolling */
+.fade-in {
+  opacity: 0.3;
+  transform: translateY(10px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Controls parallax scroll on mobile */
+.parallax {
+  will-change: transform;
+}
+
+.card-img-top {
+  max-height: 450px;
+  object-fit: contain;
+}
+
+
+/* For spacing unfilled rows on show list */
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-evenly {
+  justify-content: space-evenly;
+}

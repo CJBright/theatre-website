@@ -1,0 +1,39 @@
+<!-- Add header to page -->
+<%- include('../partials/header') %>
+
+
+<main>
+
+  <!-- Hero Section -->
+  <section class="position-relative overflow-hidden" style="height: 60vh;">
+    <img src="/images/shows/<%= show.hero %>" alt="<%= show.title %> Hero Image" 
+         class="w-100 h-100 position-absolute top-0 start-0" 
+         style="object-fit: cover; object-position: center; z-index: -1;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" 
+         style="background-color: rgba(0,0,0,0.4); z-index: 0;">
+    </div>
+
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-white text-center position-relative">
+      <h1 class="display-4 fw-bold"><%= show.title %></h1>
+    </div>
+  </section>
+
+  <!-- Show Info Section -->
+  <section class="py-5">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="lead mb-4"><%= show.description %></p>
+          <p class="fw-bold mb-4">Runtime: <%= show.runtime %></p>
+          <a href="<%= show.ticketUrl %>" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+            Purchase Tickets Here (<%= show.price %>)
+          </a>        </div>
+      </div>
+    </div>
+  </section>
+  
+
+</main>
+
+<!-- Add footer to page -->
+<%- include('../partials/footer') %>
