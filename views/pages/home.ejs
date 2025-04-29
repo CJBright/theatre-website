@@ -2,30 +2,29 @@
 <%- include('../partials/header') %>
 
 
-<!-- Hero with autoplay video -->
-<section class="position-relative overflow-hidden" style="height: 55vh; overflow:hidden">
-
-  <!-- Background Video -->
+<!-- Hero - Autoplaying video span -->
+<section  class="position-relative overflow-hidden" style="height: 55vh;">
+  <!-- Video file -->
   <video autoplay muted loop playsinline 
         class="w-100 h-100 position-absolute top-0 start-0 fade-in" 
         style="object-fit: cover; z-index: -2;">
     <source src="/videos/show-childrens.webm" type="video/webm">
-    Your browser does not support the video tag.
+    Unfortunately your browser does not support our video format.
   </video>
-  
-  <!-- Dark tint -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.4); z-index: -1;"></div>
 
-  <!-- Text overlay -->
-  <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white text-center">
-    <h1 class="display-4 fw-bold">There's nothing quite like centre-stage</h1>
+  <!-- Overlay - tint -->
+  <div class="overlay-tint position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <!-- Overlay - text -->
+  <div class="container h-100 d-flex justify-content-center align-items-center flex-column position-relative text-center">
+    <h2 class="display-4 fw-bold overlay-text">There's nothing quite like centre-stage.</h2>
+    <p class="lead overlay-text">Let the magic unfold before your eyes.</p>
   </div>
-
 </section>
 
 
 <!-- About us -->
-<section class="bg-dark py-5">
+<section class="py-5 bg-body-tertiary">
   <div class="container text-center">
     
     <h2 class="mb-4" style="font-size: 2rem; font-weight: 600;">
@@ -42,20 +41,20 @@
 </section>
 
 
-<!-- Image span -->
-<section class="position-relative" style="height: 50vh; overflow: hidden;">
+<!-- Hero - Image span -->
+<section class="position-relative overflow-hidden;" style="height: 50vh;">
   <img  src="/images/performance/theatre.webp" 
         alt="Image of a theatre." 
         class="w-100 h-100 position-absolute top-0 start-0 fade-in" 
         style="object-fit: cover; object-position: center 90%; z-index: -1;">
   
-  <!-- Dark tint -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.3); z-index: 0;"></div> 
+  <!-- Overlay - tint -->
+  <div class="overlay-tint position-absolute top-0 start-0 w-100 h-100"></div>
 </section>
 
 
 <!-- Text section -->
-<section class="py-5 bg-dark">
+<section class="py-5 bg-body-tertiary">
   <div class="container text-center">
 
     <h2 class="mb-4" style="font-size: 2rem; font-weight: 600;">
@@ -72,33 +71,35 @@
   </div>
 </section>
 
-<!-- Hero with autoplay video -->
-<section class="position-relative overflow-hidden" style="height: 55vh; overflow:hidden">
 
-  <!-- Background Video -->
+<!-- Hero - Autoplaying video span -->
+<section class="position-relative overflow-hidden" style="height: 55vh;">
+  <!-- Video file -->
   <video autoplay muted loop playsinline 
         class="w-100 h-100 position-absolute top-0 start-0 fade-in" 
         style="object-fit: cover; object-position: center 70%; z-index: -2;">
     <source src="/videos/rehersal-stage.webm" type="video/webm">
-    Your browser does not support the video tag.
+    Unfortunately your browser does not support our video format.
   </video>
   
-  <!-- Dark tint -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.4); z-index: -1;"></div>
+  <!-- Overlay - tint -->
+  <div class="overlay-tint position-absolute top-0 start-0 w-100 h-100"></div>
 
-  <!-- Text overlay -->
-  <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white text-center">
-    <h1 class="display-4 fw-bold">Setting up at a theatre near you</h1>
+  <!-- Overlay - text -->
+  <div class="container h-100 d-flex justify-content-center align-items-center flex-column position-relative text-center">
+    <h2 class="display-4 fw-bold overlay-text">Setting up at a theatre near you</h2>
   </div>
-
 </section>
 
+
 <!-- Our shows -->
-<section class="py-5 bg-dark" id="shows">
+<section class="py-5 bg-body-tertiary" id="shows">
   <div class="container text-center">
 
     <!-- Section Heading -->
-    <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 700;">Our Hottest Shows</h2>
+    <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 700;">
+      Our Latest Shows
+    </h2>
 
     <!-- Lead paragraph -->
     <p class="lead mb-5" style="font-size: 1.2rem;">
@@ -133,6 +134,42 @@
             View All Shows
           </a>
         </div>  
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Socials hero - Image span -->
+<section class="position-relative overflow-hidden;" style="height: 50vh;">
+  <img  src="/images/performance/theatre-audience.webp" 
+        alt="Image of a theatre." 
+        class="w-100 h-100 position-absolute top-0 start-0 fade-in" 
+        style="object-fit: cover; object-position: center 90%; z-index: -1;">
+  
+  <!-- Overlay - tint -->
+  <div class="overlay-tint position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <!-- Overlay - text -->
+  <div class="container h-100 d-flex justify-content-center align-items-center flex-column position-relative text-center">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4 overlay-text">
+        Never want to miss a show?
+      </h2>
+      <p class="lead overlay-text">
+        Stay in contact!
+      </p>
+  
+      <div class="d-flex justify-content-center">
+        <a href="https://facebook.com/yourtheatre" class="home-social mx-3 overlay-text" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://instagram.com/yourtheatre" class="home-social mx-3 overlay-text" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://tiktok.com/@yourtheatre" class="home-social mx-3 overlay-text" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-tiktok"></i>
+        </a>
       </div>
     </div>
   </div>
