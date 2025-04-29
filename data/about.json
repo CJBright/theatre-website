@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "history",
+    "title": "Our History",
+    "template": "about-post-single-image",
+    "image": "company/placeholder.webp",
+    "blurb": "From local roots to national acclaim.",
+    "content": [
+      "Founded in 2004, our company began as a small ensemble in a community hall.",
+      "Over two decades, we've grown to tour across the UK and beyond, telling timeless stories.",
+      "We continue to champion bold productions, local talent, and inclusive theatre for all ages."
+    ]
+  },
+  {
+    "slug": "team",
+    "title": "Meet the Team",
+    "template": "about-post-single-image",
+    "image": "company/placeholder.webp",
+    "blurb": "The creatives behind the curtain.",
+    "content": [
+      "Our team includes award-winning directors, choreographers, designers, and educators.",
+      "With a shared love of storytelling, each member brings their own spark to the stage.",
+      "From rehearsal room to final bow, their passion drives every production."
+    ]
+  }
+]
