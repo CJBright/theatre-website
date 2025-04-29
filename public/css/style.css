@@ -1,13 +1,149 @@
-/* Invert logo 1-White, 0-Black */
-#header-logo{
-  filter: grayscale(100%) brightness(0) invert(1);
+/* Dark Mode Behaviour */
+/*  */
+
+/* Make cards dark too */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
 }
+
+/* Adjust nav background */
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+/* Adjust buttons if needed */
+body.dark-mode .btn-primary {
+  background-color: #bb86fc;
+  border-color: #bb86fc;
+}
+
+/* Adjust links */
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+/* Dark mode toggle size */
+.form-check-label {
+  font-size: 0.9rem;
+}
+
+/* Dark mode toggle type */
+.form-check-input {
+  cursor: pointer;
+}
+
+/* Black logo in light mode */
+[data-bs-theme="light"] #header-logo {
+  filter: grayscale(100%) brightness(0) invert(0);
+}
+
+/* White logo in dark mode */
+[data-bs-theme="dark"] #header-logo {
+  filter: none;
+}
+
+/* Nav links default (light mode) */
+[data-bs-theme="light"] .nav-link {
+  color: #000; /* Black for light mode */
+}
+
+/* Nav links dark mode */
+[data-bs-theme="dark"] .nav-link {
+  color: #fff; /* White for dark mode */
+}
+
+/* Social icons in footer */
+.social-icon {
+  color: var(--bs-body-color); /* Dynamic text color based on Bootstrap theme */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Social icons in footer hover effect */
+.social-icon:hover {
+  color: var(--bs-primary); /* Change color slightly on hover */
+  transform: scale(1.2);
+}
+
+/* Social Icons - Shared icon behavior */
+.social-icon {
+  color: var(--bs-body-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* HOMEPAGE social icons */
+.home-social i {
+  font-size: 4rem;
+  margin: 0 1rem;
+}
+
+/* HOMEPAGE social icons - md screens */
+@media (min-width: 768px) {
+  .home-social i {
+    font-size: 5rem;
+    margin: 0 2rem;
+  }
+}
+
+/* HOMEPAGE social icons - xxl screens */
+@media (min-width: 1400px) {
+  .home-social i {
+    font-size: 6rem;
+    margin: 0 2rem;
+  }
+}
+
+/* FOOTER social icons */
+.footer-social i {
+  line-height: 1;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+
+/* FOOTER social icons - md screens */
+@media (min-width: 768px) {
+  .footer-social i {
+    font-size: 2.5rem;
+    margin: 0 2rem;
+  }
+}
+
+/* FOOTER social icons - xxl screens */
+@media (min-width: 1400px) {
+  .footer-social i {
+    font-size: 3rem;
+    margin: 0 3rem;
+  }
+}
+
+
+/* Video / Photo Overlay Behaviour */
+/*  */
+
+/* Photo and video overlay tint - dark mode */
+.overlay-tint {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.5s ease;
+}
+
+/* Photo and video overlay tint - light mode */
+[data-bs-theme="light"] .overlay-tint {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Photo and video overlay text colour */
+.overlay-text {
+  color: #fff;
+}
+
+
+/* Show Poster Card Behaviour */
+/*  */
 
 /* Animate show poster cards on hover */
 .card {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 
 /* Card hover effect */
 .card:hover {
@@ -16,42 +152,41 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Show cards take 100% width on small screens, 80% on large */
 .show-grid-wrapper {
   width: 100%;
 }
 
-@media (min-width: 1200px) { /* Large screens (xl in Bootstrap) */
+/* Limit grid size on large screens (xl in Bootstrap) */
+@media (min-width: 1200px) { 
   .show-grid-wrapper {
     width: 80%;
     margin: 0 auto;
   }
 }
 
+/* Maintain poster aspect ratio */
 .show-poster-img {
   width: 100%;
-  height: auto; /* Keep natural aspect ratio */
+  height: auto;
   object-fit: contain; /* Important: contain, not cover */
 }
 
 
-/* Set opacity for fade in and out scrolling */
+/* Properties for items faded OUT (scrolling behaviour) */
 .fade-in {
   opacity: 0.3;
-  transform: translateY(10px);
+  /* transform: translateY(10px); */
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+/* Properties for items faded IN (scrolling behaviour) */
 .fade-in.visible {
   opacity: 1;
-  transform: translateY(0);
+  /* transform: translateY(0); */
 }
 
-/* Controls parallax scroll on mobile */
-.parallax {
-  will-change: transform;
-}
+
 
 .card-img-top {
   max-height: 450px;
@@ -59,7 +194,18 @@
 }
 
 
-/* For spacing unfilled rows on show list */
+@media (max-width: 1000px) {
+  .poster-half-mobile {
+    max-width: 65% !important;
+  }
+}
+
+
+
+/* Bootstrap behaviour as classes for adding/removing through main.js*/
+/*  */
+
+/* Classes to assign in main.js to determine layout behaviour */
 .justify-center {
   justify-content: center;
 }
@@ -67,3 +213,43 @@
 .justify-space-evenly {
   justify-content: space-evenly;
 }
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+
+/* Contact Page -> FAQ Accordion Dark/Light Colouring */
+/*  */
+
+/* Light mode: active accordion styling */
+[data-bs-theme="light"] .accordion-item.active .accordion-body {
+  background-color: #f0f8ff;
+  border-left: 4px solid #0d6efd;
+  padding-left: 1.25rem;
+}
+
+[data-bs-theme="light"] .accordion-item.active .accordion-button {
+  background-color: #e9f3ff;
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+/* Dark mode: higher contrast styling */
+[data-bs-theme="dark"] .accordion-item.active .accordion-body {
+  background-color: #454141;
+  border-left: 4px solid #0d6efd;
+  color: #f1f1f1;
+}
+
+[data-bs-theme="dark"] .accordion-item.active .accordion-button {
+  background-color: #454141;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+/* Controls parallax scroll on mobile
+.parallax {
+  will-change: transform;
+} */
