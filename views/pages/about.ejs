@@ -1,7 +1,33 @@
 <!-- Add header to page -->
 <%- include('../partials/header') %>
 
-ABOUT PAGE
+
+<!-- Show posts from About JSON -->
+<main>
+  <!-- Iterate through posts, flipping hero direction -->
+  <% sections.forEach((section, index) => { %>
+    <section class="container col-xxl-10 px-4 py-5">
+      <div class="row <%= index % 2 === 1 ? 'flex-lg-row-reverse' : '' %> align-items-center g-5 py-5">
+
+        <!-- Image -->
+        <div class="col-12 col-lg-6">
+          <img src="/images/<%= section.image %>" class="img-fluid rounded shadow" alt="<%= section.title %> image" loading="lazy">
+        </div>
+
+        <!-- Text -->
+        <div class="col-12 col-lg-6">
+          <h2 class="display-6 fw-bold text-body-emphasis mb-3"><%= section.title %></h2>
+          <p class="lead"><%= section.blurb %></p>
+          
+          <!-- Button to read post -->
+          <a href="/about/<%= section.slug %>" class="btn btn-primary btn-lg mt-2">Read More</a>
+        </div>
+
+      </div>
+    </section>
+  <% }) %>
+</main>
+
 
 <!-- Add footer to page -->
 <%- include('../partials/footer') %>

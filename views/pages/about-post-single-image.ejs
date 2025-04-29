@@ -1,0 +1,31 @@
+<!-- Add header to page -->
+<%- include('../partials/header') %>
+
+
+<main class="container py-5">
+
+  <!-- Post title -->
+  <div class="mb-4">
+    <h1 class="display-4 fw-bold"><%= section.title %></h1>
+    <p class="lead text-muted"><%= section.blurb %></p>
+  </div>
+
+  <!-- Post image -->
+  <img  src="/images/<%= section.image %>" 
+        class="img-fluid rounded shadow mb-4" 
+        style="max-width: 800px;"
+        alt="<%= section.title %>">
+
+  <!-- Post content -->
+  <% section.content.forEach(paragraph => { %>
+    <p class="mb-3"><%= paragraph %></p>
+  <% }) %>
+
+  <!-- Link to About page -->
+  <a href="/about" class="btn btn-outline-secondary mt-4">← Back to About</a>
+
+</main>
+
+
+<!-- Add footer to page -->
+<%- include('../partials/footer') %>
