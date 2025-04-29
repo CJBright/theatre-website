@@ -1,0 +1,67 @@
+<!-- Add header to page -->
+<%- include('../partials/header') %>
+
+
+<main>
+  <!-- Hero Section with Poster and Text -->
+  <section class="container col-xxl-10 px-4 py-5">
+    <div class="row g-5 py-5 align-items-stretch">
+
+      <!-- Left: Responsive Image Column -->
+      <div class="col-12 col-lg-5 d-flex align-items-stretch">
+
+        <!-- Hero for small screens -->
+        <img
+          src="/images/shows/<%= show.hero %>"
+          class="img-fluid rounded shadow object-fit-cover d-block d-lg-none w-100"
+          alt="<%= show.title %> Hero"
+          loading="lazy">
+
+        <!-- Poster for large screens -->
+        <img
+          src="/images/shows/<%= show.poster %>"
+          class="img-fluid rounded shadow w-100 h-auto object-fit-cover d-none d-lg-block"
+          style="object-fit: contain; max-height: 100%;"
+          alt="<%= show.title %> Poster"
+          loading="lazy">
+      </div>
+
+
+      <!-- Right: Show information -->
+      <div class="col-12 col-lg-7 d-flex flex-column justify-content-between">
+
+        <!-- Title + Description -->
+        <div>
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4"><%= show.title %></h1>
+          <p class="lead mb-4 pb-3"><%= show.description %></p>
+        </div>
+
+        <!-- Venue + Show -->
+          <div>
+            <!-- Venue -->
+            <p class="fw-semibold mb-1 text-uppercase h6 text-muted">Venue:</p>
+            <p class="mb-3"><strong><%= show.venue %></strong><br><%= show.address %></p>
+          
+            <!-- Start Time -->
+            <p class="fw-semibold mb-1 text-uppercase h6 text-muted">Start Time (Runtime):</p>
+            <p class="mb-3"><%= show.startTime %> (<%= show.runtime %>)</p>
+          
+            <!-- Phone Bookings -->
+            <p class="fw-semibold mb-1 text-uppercase h6 text-muted">Box Office (Group Bookings):</p>
+            <p class="mb-3"><%= show.phone %> (<%= show.phone_group %>)</p>
+          
+            <!-- Ticket Link -->
+            <a href="<%= show.ticketUrl %>" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+              Book Now (Tickets from just <%= show.price %>!)
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<!-- Add footer to page -->
+<%- include('../partials/footer') %>
