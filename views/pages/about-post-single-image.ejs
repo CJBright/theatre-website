@@ -2,28 +2,34 @@
 <%- include('../partials/header') %>
 
 
-<main class="container py-5">
+<main>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
 
-  <!-- Post title -->
-  <div class="mb-4">
-    <h1 class="display-4 fw-bold"><%= section.title %></h1>
-    <p class="lead text-muted"><%= section.blurb %></p>
+        <!-- Post title -->
+        <h1 class="mb-4 text-center"><%= section.title %></h1>
+
+        <!-- Post image, size constrained, left aligned -->
+        <div class="mb-4 text-center">
+          <img src="/images/<%= section.image %>" 
+                alt="<%= section.title %>" 
+                class="img-fluid rounded shadow"
+                style="max-width: 600px; width: 100%;">
+        </div>
+    
+        <!-- Post content -->
+        <div class="mt-4 text-center">
+          <% section.content.forEach(function(paragraph) { %>
+            <p><%= paragraph %></p>
+          <% }) %>
+        </div>
+
+        <!-- Link to About page -->
+        <a href="/about" class="btn btn-outline-secondary mt-4">← Back to About</a>
+      </div>
+    </div>
   </div>
-
-  <!-- Post image -->
-  <img  src="/images/<%= section.image %>" 
-        class="img-fluid rounded shadow mb-4" 
-        style="max-width: 800px;"
-        alt="<%= section.title %>">
-
-  <!-- Post content -->
-  <% section.content.forEach(paragraph => { %>
-    <p class="mb-3"><%= paragraph %></p>
-  <% }) %>
-
-  <!-- Link to About page -->
-  <a href="/about" class="btn btn-outline-secondary mt-4">← Back to About</a>
-
 </main>
 
 
